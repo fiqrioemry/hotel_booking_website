@@ -47,7 +47,16 @@ const Room = ({ room }) => {
         <Link to={`/room/${id}`}>
           <h3 className="h3">{name}</h3>
         </Link>
-        <p>{description.slice(0, 56)}</p>
+        <p className="max-w-[300px] mx-auto mb-3 lg:mb-6">
+          {description.slice(0, 56)}
+        </p>
+        {/* button */}
+        <Link
+          to={"/"}
+          className="btn btn-secondary btn-sm max-w-[250px] mx-auto"
+        >
+          Book From Price $ {price}
+        </Link>
       </div>
     </div>
   );
