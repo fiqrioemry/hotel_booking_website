@@ -3,28 +3,20 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="fixed top-0 w-full">
+    <header className="fixed top-0 w-full">
       <div className="container mx-auto flex justify-between items-center h-[60px] py-2">
-        <div className="logo">LOGO</div>
+        <div className="logo">
+          <img src="#" alt="" />
+        </div>
         <nav className="flex justify-between items-center gap-2 uppercase">
-          <button>
-            <Link to="#">home</Link>
-          </button>
-          <button>
-            <Link to="#">rooms</Link>
-          </button>
-          <button>
-            <Link to="#">restaurant</Link>
-          </button>
-          <button>
-            <Link to="#">spa</Link>
-          </button>
-          <button>
-            <Link to="#">spa</Link>
-          </button>
+          <Link to="#">home</Link>
+          <Link to="#">rooms</Link>
+          <Link to="#">restaurant</Link>
+          <Link to="#">spa</Link>
+          <Link to="#">contact</Link>
         </nav>
       </div>
-    </div>
+    </header>
   );
 };
 

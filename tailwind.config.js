@@ -2,27 +2,31 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      primary: "Poppins",
+      primary: "Gilda Display",
+      secondary: "Barlow",
+      tertiary: "Barlow Condensed",
     },
     container: {
       padding: {
-        DEFAULT: "30px",
-        lg: "0",
+        DEFAULT: "15px",
       },
     },
     screens: {
       sm: "640px",
       md: "768px",
-      lg: "1024px",
-      xl: "1440px",
+      lg: "960px",
+      xl: "1140px",
     },
     extend: {
       colors: {
-        primary: "#222222",
-        secondary: "#F5E6E0",
+        primary: "#0a0a0a",
+        accent: {
+          DEFAULT: "#a37d4c",
+          hover: "#967142",
+        },
       },
       backgroundImage: {
-        hero: "url('./img/bg_hero.svg')",
+        room: "url('./assets/img/room.jpg')",
       },
     },
   },

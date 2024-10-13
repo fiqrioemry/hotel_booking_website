@@ -1,19 +1,24 @@
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// component
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+// pages
+import Home from "./pages/Home";
+import RoomDetails from "./pages/RoomDetails";
+
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+  { path: "/room/:id", element: <RoomDetails /> },
+]);
 
 function App() {
   return (
     <div className="overflow-hidden">
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <Header />
+      <RouterProvider router={router} />
+      <Footer />
     </div>
   );
 }
