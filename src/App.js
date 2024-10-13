@@ -1,5 +1,3 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 // component
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -8,17 +6,21 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import RoomDetails from "./pages/RoomDetails";
 
-const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/room/:id", element: <RoomDetails /> },
-]);
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="overflow-hidden">
-      <Header />
-      <RouterProvider router={router} />
-      <Footer />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/room/:id" element={<RoomDetails />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
