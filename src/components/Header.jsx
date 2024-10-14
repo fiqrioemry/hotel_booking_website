@@ -14,19 +14,37 @@ const Header = () => {
   return (
     <header
       className={`${
-        header ? "bg-white shadow-lg py-8" : "bg-none py-6"
+        header ? "bg-white shadow-lg py-6" : "bg-transparent py-8"
       } fixed top-0 w-full z-[999]   transition-all duration-300`}
     >
-      <div className="container mx-auto flex justify-between items-center  ">
-        <div className="logo">
-          <img src="#" alt="" />
-        </div>
-        <nav className="flex justify-between items-center gap-2 uppercase">
-          <Link to="#">home</Link>
-          <Link to="#">rooms</Link>
-          <Link to="#">restaurant</Link>
-          <Link to="#">spa</Link>
-          <Link to="#">contact</Link>
+      <div className="container mx-auto flex flex-col lg:flex-row lg:justify-between items-center gap-y-6  lg:gap-y-0">
+        <Link to="/" className="logo">
+          {header ? (
+            <img className="w-[138px]" src={LogoDark} alt="" />
+          ) : (
+            <img className="[160px]" src={LogoWhite} alt="" />
+          )}
+        </Link>
+        <nav
+          className={`${
+            header ? "text-primary" : "text-white"
+          } flex justify-between gap-x-8 lg:gap-x-8 uppercase font-tertiary trackin-[3px] text-lg`}
+        >
+          <Link to="#" className="hover:text-accent transition">
+            home
+          </Link>
+          <Link className="hover:text-accent transition" to="#">
+            rooms
+          </Link>
+          <Link className="hover:text-accent transition" to="#">
+            restaurant
+          </Link>
+          <Link className="hover:text-accent transition" to="#">
+            spa
+          </Link>
+          <Link className="hover:text-accent transition" to="#">
+            contact
+          </Link>
         </nav>
       </div>
     </header>
