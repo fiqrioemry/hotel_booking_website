@@ -2,7 +2,7 @@
   background: white;
   border: none;
   border-radius: 0;
-  font-family: 'Barlow';
+  font-family: "Barlow";
   border: 1px solid #aa8453;
   font-size: 0.9rem;
 }
@@ -21,7 +21,7 @@
   padding-top: 0;
 }
 
-.react-datepicker-popper[data-placement^='bottom'] {
+.react-datepicker-popper[data-placement^="bottom"] {
   padding-top: 0;
 }
 .react-datepicker__triangle {
