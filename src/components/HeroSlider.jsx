@@ -12,17 +12,17 @@ const slides = [
   {
     title: "Your Luxury Hotel For Vacation",
     bg: ImageOne,
-    btnText: "Room & Suites",
+    btnText: "See our Rooms",
   },
   {
     title: "Your Luxury Hotel For Vacation",
     bg: ImageTwo,
-    btnText: "Room & Suites",
+    btnText: "See our Rooms",
   },
   {
     title: "Your Luxury Hotel For Vacation",
     bg: ImageThree,
-    btnText: "Room & Suites",
+    btnText: "See our Rooms",
   },
 ];
 
@@ -33,23 +33,10 @@ const HeroSlider = () => {
         const { title, bg, btnText } = slide;
         return (
           <SwiperSlide
-            className="h-full bg-pink-500 flex justify-center items-center relative"
             key={index}
+            className="flex justify-center items-center w-full h-full bg-red-500 "
           >
-            <div className="z-20 text-white text-center">
-              <div className="uppercase font-tertiary tracking-[6px] mb-5 ">
-                Just Enjoy and relax
-              </div>
-              <h1 className="text-[32px] font-primary uppercase tracking-[2px]">
-                {title}
-              </h1>
-            </div>
-            <div className="absolute top-0 w-full h-full">
-              <img className="object-cover h-full w-full" src={bg} alt="" />
-            </div>
-
-            {/* overlay */}
-            <div className="absolute top-0 w-full h-full bg-black/70"></div>
+            text
           </SwiperSlide>
         );
       })}
