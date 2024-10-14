@@ -9,11 +9,13 @@ import RoomDetails from "./pages/RoomDetails";
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="overflow-hidden">
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

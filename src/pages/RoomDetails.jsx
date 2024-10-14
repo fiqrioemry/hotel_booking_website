@@ -22,6 +22,7 @@ const RoomDetails = () => {
 
   return (
     <section>
+      <ScrollToTop />
       <div className="bg-room bg-cover h-[560px] relative  flex justify-center items-center">
         <div className="absolute w-full h-full bg-black/70"></div>
 
@@ -30,12 +31,12 @@ const RoomDetails = () => {
         </h1>
       </div>
       <div className="container lg:mx-auto mx-[10px]">
-        <div className="flex flex-col lg:flex-row h-full py-24">
+        <div className="flex flex-col lg:flex-row h-full py-24 md:gap-x-6 lg:gap-x-10">
           {/* left */}
           <div className="w-full h-full lg:w-[60%]  ">
-            <h2>{name}</h2>
+            <h2 className="h2">{name}</h2>
             <p className="mb-8">{description}</p>
-            <img src={imageLg} alt="" />
+            <img className="w-full" src={imageLg} alt="" />
             <div className="mt-12">
               <h3 className="h3 mb-3">Room Facilities</h3>
               <p className="mb-12">
@@ -65,10 +66,53 @@ const RoomDetails = () => {
           </div>
           {/* right */}
           <div className="w-full h-full lg:w-[40%]">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dicta
-            culpa animi a dolor voluptatibus explicabo iste harum exercitationem
-            reprehenderit. Sequi ipsum, velit ad amet quam iste. Quisquam,
-            nostrum reiciendis.
+            {/* reservation */}
+            <div className="py-8 px-6 bg-accent/20 mb-12">
+              <div className="flex flex-col space-y-4 mb-4">
+                <h3>Your Reservation</h3>
+                <div className="h-[60px]">
+                  <CheckIn />
+                </div>
+                <div className="h-[60px]">
+                  <CheckOut />
+                </div>
+                <div className="h-[60px]">
+                  <AdultsDropdown />
+                </div>
+                <div className="h-[60px]">
+                  <KidsDropdown />
+                </div>
+              </div>
+              <button className="btn btn-lg btn-primary w-full">
+                Book for now ${price}
+              </button>
+            </div>
+            {/* rules */}
+            <div>
+              <h3 className="h3">Hote Rules</h3>
+              <p className="mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                molestiae culpa unde, similique laborum sed!
+              </p>
+              <ul className="flex flex-col gap-y-4">
+                <li className="flex items-center gap-x-4">
+                  <FaCheck className="text-accent" />
+                  Check In : 3:00 PM - 9:00 PM
+                </li>
+                <li className="flex items-center gap-x-4">
+                  <FaCheck className="text-accent" />
+                  Check Out : 10:30 AM
+                </li>
+                <li className="flex items-center gap-x-4">
+                  <FaCheck className="text-accent" />
+                  No Pets
+                </li>
+                <li className="flex items-center gap-x-4">
+                  <FaCheck className="text-accent" />
+                  No Smoking
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

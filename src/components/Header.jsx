@@ -30,21 +30,13 @@ const Header = () => {
             header ? "text-primary" : "text-white"
           } flex justify-between gap-x-8 lg:gap-x-8 uppercase font-tertiary trackin-[3px] text-lg`}
         >
-          <Link to="#" className="hover:text-accent transition">
-            home
-          </Link>
-          <Link className="hover:text-accent transition" to="#">
+          <Link className="hover:text-accent transition">home</Link>
+          <a href="#room" className="hover:text-accent transition">
             rooms
-          </Link>
-          <Link className="hover:text-accent transition" to="#">
-            restaurant
-          </Link>
-          <Link className="hover:text-accent transition" to="#">
-            spa
-          </Link>
-          <Link className="hover:text-accent transition" to="#">
-            contact
-          </Link>
+          </a>
+          <Link className="hover:text-accent transition">restaurant</Link>
+          <Link className="hover:text-accent transition">spa</Link>
+          <Link className="hover:text-accent transition">contact</Link>
         </nav>
       </div>
     </header>

@@ -52,8 +52,13 @@ const HeroSlider = () => {
                 <h1 className="text-[32px] max-w-[920px] text-center font-primary uppercase tracking-[2px]  lg:text-[68px] leading-tight mb-6">
                   {title}
                 </h1>
-                <button className="btn btn-lg btn-primary mx-auto h-[500px] py-4 px-6">
-                  {btnText}
+                <button>
+                  <a
+                    className="btn btn-lg btn-primary mx-auto  py-4 px-6 "
+                    href="#room"
+                  >
+                    {btnText}
+                  </a>
                 </button>
               </div>
 
