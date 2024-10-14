@@ -52,7 +52,7 @@ const Room = ({ room }) => {
         </p>
         {/* button */}
         <Link
-          to={"/"}
+          to={`/room/${id}`}
           className="btn btn-secondary btn-sm max-w-[250px] mx-auto"
         >
           Book From Price $ {price}
